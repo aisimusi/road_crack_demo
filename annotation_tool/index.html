@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>道路裂缝标注</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <h1 id="annotation-title">道路裂缝标注</h1>
+          <p id="sample-meta">正在读取数据清单...</p>
+        </div>
+      </div>
+      <div class="header-progress" aria-label="标注进度">
+        <div class="progress-copy">
+          <span id="progress-label">0 / 0</span>
+          <span id="progress-detail">已完成 0</span>
+        </div>
+        <div class="progress-track"><span id="progress-fill"></span></div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="segment-pane">
+        <div class="pane-heading">
+          <h2>路段</h2>
+          <select id="status-filter" aria-label="筛选状态">
+            <option value="all">全部样本</option>
+            <option value="pending">待标注</option>
+            <option value="completed">已完成</option>
+            <option value="skipped">已跳过</option>
+          </select>
+          <select id="split-filter" aria-label="筛选数据用途">
+            <option value="all">训练 + 测试</option>
+            <option value="train">新增训练集</option>
+            <option value="test">新增测试集</option>
+          </select>
+        </div>
+        <div id="segment-list" class="segment-list"></div>
+      </aside>
+
+      <section class="editor-pane">
+        <div class="toolbar" role="toolbar" aria-label="标注工具">
+          <div class="segmented-control" aria-label="绘制模式">
+            <button id="brush-tool" class="active" type="button">画笔</button>
+            <button id="eraser-tool" type="button">橡皮</button>
+          </div>
+          <label class="brush-control">
+            <span>笔刷</span>
+            <input id="brush-size" type="range" min="2" max="64" value="14" />
+            <output id="brush-size-value">14</output>
+          </label>
+          <span class="toolbar-separator"></span>
+          <button id="undo-button" class="icon-button" type="button" title="撤销 (Ctrl+Z)" aria-label="撤销">↶</button>
+          <button id="redo-button" class="icon-button" type="button" title="重做 (Ctrl+Y)" aria-label="重做">↷</button>
+          <button id="clear-button" type="button">清空</button>
+          <span class="toolbar-spacer"></span>
+          <button id="zoom-out" class="icon-button" type="button" title="缩小" aria-label="缩小">−</button>
+          <output id="zoom-value" class="zoom-value">100%</output>
+          <button id="zoom-in" class="icon-button" type="button" title="放大" aria-label="放大">+</button>
+          <button id="fit-button" class="icon-button fit-icon" type="button" title="适合窗口" aria-label="适合窗口">⌗</button>
+        </div>
+
+        <div id="canvas-viewport" class="canvas-viewport">
+          <div id="canvas-wrap" class="canvas-wrap">
+            <img id="source-image" alt="待标注道路图块" draggable="false" />
+            <canvas id="mask-canvas"></canvas>
+            <canvas id="cursor-canvas" aria-hidden="true"></canvas>
+          </div>
+          <div id="loading-state" class="loading-state">正在加载图块...</div>
+        </div>
+
+        <div class="action-bar">
+          <button id="previous-button" class="secondary-button" type="button">上一张</button>
+          <div class="sample-jump">
+            <label for="sample-index">样本</label>
+            <input id="sample-index" type="number" min="1" value="1" />
+            <span id="sample-total">/ 0</span>
+          </div>
+          <div class="primary-actions">
+            <button id="skip-button" class="quiet-button" type="button">跳过</button>
+            <button id="negative-button" class="negative-button" type="button">标为空白</button>
+            <button id="save-button" class="primary-button" type="button">保存并下一张</button>
+          </div>
+          <button id="next-button" class="secondary-button" type="button">下一张</button>
+        </div>
+      </section>
+
+      <aside class="detail-pane">
+        <section class="detail-section context-section">
+          <div class="section-heading">
+            <h2>原帧位置</h2>
+            <span id="quadrant-badge">--</span>
+          </div>
+          <img id="context-image" alt="原始帧与当前象限位置" />
+        </section>
+        <section class="detail-section">
+          <h2>样本信息</h2>
+          <dl class="metadata-list">
+            <div><dt>视频片段</dt><dd id="video-name">--</dd></div>
+            <div><dt>抽样点</dt><dd id="sample-number">--</dd></div>
+            <div><dt>时间</dt><dd id="time-value">--</dd></div>
+            <div><dt>帧号</dt><dd id="frame-value">--</dd></div>
+            <div><dt>图块尺寸</dt><dd id="size-value">--</dd></div>
+            <div><dt>状态</dt><dd id="status-value">--</dd></div>
+            <div id="split-row"><dt>数据用途</dt><dd id="split-value">--</dd></div>
+          </dl>
+        </section>
+        <section class="detail-section output-section">
+          <h2>数据集输出</h2>
+          <p id="output-path">--</p>
+        </section>
+      </aside>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js"></script>
+  </body>
+</html>

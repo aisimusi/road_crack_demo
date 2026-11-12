@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-26T11:33:50+00:00",
+  "sample_files": [
+    "/home/HDD3/gty/road-crack-demo/calibration/lane_width_samples.json",
+    "/home/HDD3/gty/road-crack-demo/calibration/lane_width_samples_1.json"
+  ],
+  "sample_count": 76,
+  "camera": {
+    "sensor_width_mm": 6.4,
+    "sensor_height_mm": 3.6,
+    "focal_length_is_35mm_equivalent": true,
+    "physical_focal_min_mm": 21.0,
+    "equivalent_focal_min_mm": 113.0
+  },
+  "model": {
+    "effective_focal_mm": "physical_focal_mm * focal_scale / (dzoom_ratio ** dzoom_power)",
+    "corrected_pitch_deg": "srt_pitch_deg + pitch_offset_deg",
+    "corrected_altitude_m": "max(srt_rel_alt_m * altitude_scale + altitude_offset_m, min_altitude_m)"
+  },
+  "parameters": {
+    "focal_scale": 1.682,
+    "dzoom_power": 1.0,
+    "pitch_offset_deg": -4.8,
+    "altitude_scale": 1.0,
+    "altitude_offset_m": 12.18,
+    "min_altitude_m": 1.0
+  },
+  "baseline_parameters": {
+    "focal_scale": 1.0,
+    "dzoom_power": 1.0,
+    "pitch_offset_deg": 0.0,
+    "altitude_scale": 1.0,
+    "altitude_offset_m": 0.0,
+    "min_altitude_m": 1.0
+  },
+  "baseline_metrics": {
+    "count": 76,
+    "bias_percent": -9.4065,
+    "mae_percent": 18.576,
+    "rmse_percent": 20.7115,
+    "max_abs_percent": 31.6074,
+    "groups": {
+      "band:center/bottom": {
+        "count": 13,
+        "bias_percent": -8.8165,
+        "mae_percent": 13.665,
+        "min_percent": -31.6074,
+        "max_percent": 8.0993
+      },
+      "band:center/middle": {
+        "count": 6,
+        "bias_percent": -13.2507,
+        "mae_percent": 17.3435,
+        "min_percent": -28.442,
+        "max_percent": 6.8545
+      },
+      "band:center/top": {
+        "count": 11,
+        "bias_percent": -3.911,
+        "mae_percent": 20.6146,
+        "min_percent": -28.5895,
+        "max_percent": 24.6709
+      },
+      "band:left/bottom": {
+        "count": 7,
+        "bias_percent": -8.5425,
+        "mae_percent": 15.8771,
+        "min_percent": -31.433,
+        "max_percent": 8.1231
+      },
+      "band:left/middle": {
+        "count": 14,
+        "bias_percent": -13.751,
+        "mae_percent": 20.4233,
+        "min_percent": -30.3891,
+        "max_percent": 13.1461
+      },
+      "band:left/top": {
+        "count": 12,
+        "bias_percent": -6.3395,
+        "mae_percent": 23.7419,
+        "min_percent": -30.3648,
+        "max_percent": 24.3756
+      },
+      "band:right/bottom": {
+        "count": 5,
+        "bias_percent": -6.3356,
+        "mae_percent": 11.2274,
+        "min_percent": -16.0683,
+        "max_percent": 8.3096
+      },
+      "band:right/middle": {
+        "count": 6,
+        "bias_percent": -11.3818,
+        "mae_percent": 19.3011,
+        "min_percent": -28.1953,
+        "max_percent": 15.0522
+      },
+      "band:right/top": {
+        "count": 2,
+        "bias_percent": -24.699,
+        "mae_percent": 24.699,
+        "min_percent": -25.9388,
+        "max_percent": -23.4591
+      },
+      "file:lane_width_samples.json": {
+        "count": 36,
+        "bias_percent": -26.82,
+        "mae_percent": 26.82,
+        "min_percent": -31.6074,
+        "max_percent": -23.4591
+      },
+      "file:lane_width_samples_1.json": {
+        "count": 40,
+        "bias_percent": 6.2657,
+        "mae_percent": 11.1565,
+        "min_percent": -16.7148,
+        "max_percent": 24.6709
+      },
+      "file_band:lane_width_samples.json:center/bottom": {
+        "count": 4,
+        "bias_percent": -28.6729,
+        "mae_percent": 28.6729,
+        "min_percent": -31.6074,
+        "max_percent": -27.3352
+      },
+      "file_band:lane_width_samples.json:center/middle": {
+        "count": 3,
+        "bias_percent": -27.7272,
+        "mae_percent": 27.7272,
+        "min_percent": -28.442,
+        "max_percent": -27.0924
+      },
+      "file_band:lane_width_samples.json:center/top": {
+        "count": 5,
+        "bias_percent": -26.3074,
+        "mae_percent": 26.3074,
+        "min_percent": -28.5895,
+        "max_percent": -23.9353
+      },
+      "file_band:lane_width_samples.json:left/bottom": {
+        "count": 3,
+        "bias_percent": -28.4895,
+        "mae_percent": 28.4895,
+        "min_percent": -31.433,
+        "max_percent": -26.584
+      },
+      "file_band:lane_width_samples.json:left/middle": {
+        "count": 9,
+        "bias_percent": -26.58,
+        "mae_percent": 26.58,
+        "min_percent": -30.3891,
+        "max_percent": -25.2585
+      },
+      "file_band:lane_width_samples.json:left/top": {
+        "count": 7,
+        "bias_percent": -25.7841,
+        "mae_percent": 25.7841,
+        "min_percent": -30.3648,
+        "max_percent": -23.8934
+      },
+      "file_band:lane_width_samples.json:right/middle": {
+        "count": 3,
+        "bias_percent": -27.1782,
+        "mae_percent": 27.1782,
+        "min_percent": -28.1953,
+        "max_percent": -25.49
+      },
+      "file_band:lane_width_samples.json:right/top": {
+        "count": 2,
+        "bias_percent": -24.699,
+        "mae_percent": 24.699,
+        "min_percent": -25.9388,
+        "max_percent": -23.4591
+      },
+      "file_band:lane_width_samples_1.json:center/bottom": {
+        "count": 9,
+        "bias_percent": 0.0086,
+        "mae_percent": 6.9949,
+        "min_percent": -16.7148,
+        "max_percent": 8.0993
+      },
+      "file_band:lane_width_samples_1.json:center/middle": {
+        "count": 3,
+        "bias_percent": 1.2258,
+        "mae_percent": 6.9599,
+        "min_percent": -8.6011,
+        "max_percent": 6.8545
+      },
+      "file_band:lane_width_samples_1.json:center/top": {
+        "count": 6,
+        "bias_percent": 14.7526,
+        "mae_percent": 15.8706,
+        "min_percent": -3.354,
+        "max_percent": 24.6709
+      },
+      "file_band:lane_width_samples_1.json:left/bottom": {
+        "count": 4,
+        "bias_percent": 6.4178,
+        "mae_percent": 6.4178,
+        "min_percent": 4.5967,
+        "max_percent": 8.1231
+      },
+      "file_band:lane_width_samples_1.json:left/middle": {
+        "count": 5,
+        "bias_percent": 9.3412,
+        "mae_percent": 9.3412,
+        "min_percent": 4.9784,
+        "max_percent": 13.1461
+      },
+      "file_band:lane_width_samples_1.json:left/top": {
+        "count": 5,
+        "bias_percent": 20.883,
+        "mae_percent": 20.883,
+        "min_percent": 17.2389,
+        "max_percent": 24.3756
+      },
+      "file_band:lane_width_samples_1.json:right/bottom": {
+        "count": 5,
+        "bias_percent": -6.3356,
+        "mae_percent": 11.2274,
+        "min_percent": -16.0683,
+        "max_percent": 8.3096
+      },
+      "file_band:lane_width_samples_1.json:right/middle": {
+        "count": 3,
+        "bias_percent": 4.4147,
+        "mae_percent": 11.424,
+        "min_percent": -10.514,
+        "max_percent": 15.0522
+      }
+    }
+  },
+  "fitted_metrics": {
+    "count": 76,
+    "bias_percent": -0.3413,
+    "mae_percent": 3.6938,
+    "rmse_percent": 5.4768,
+    "max_abs_percent": 15.0179,
+    "groups": {
+      "band:center/bottom": {
+        "count": 13,
+        "bias_percent": -0.5043,
+        "mae_percent": 4.7084,
+        "min_percent": -15.0179,
+        "max_percent": 5.4374
+      },
+      "band:center/middle": {
+        "count": 6,
+        "bias_percent": -2.7239,
+        "mae_percent": 3.2482,
+        "min_percent": -14.5806,
+        "max_percent": 0.7721
+      },
+      "band:center/top": {
+        "count": 11,
+        "bias_percent": -1.6015,
+        "mae_percent": 2.8809,
+        "min_percent": -14.8176,
+        "max_percent": 1.9824
+      },
+      "band:left/bottom": {
+        "count": 7,
+        "bias_percent": 3.5789,
+        "mae_percent": 4.6916,
+        "min_percent": -3.8945,
+        "max_percent": 7.7463
+      },
+      "band:left/middle": {
+        "count": 14,
+        "bias_percent": 0.8056,
+        "mae_percent": 2.264,
+        "min_percent": -4.6419,
+        "max_percent": 3.9653
+      },
+      "band:left/top": {
+        "count": 12,
+        "bias_percent": 1.2048,
+        "mae_percent": 2.2959,
+        "min_percent": -5.8065,
+        "max_percent": 6.8746
+      },
+      "band:right/bottom": {
+        "count": 5,
+        "bias_percent": -5.9135,
+        "mae_percent": 10.2141,
+        "min_percent": -14.3742,
+        "max_percent": 7.3776
+      },
+      "band:right/middle": {
+        "count": 6,
+        "bias_percent": -1.4424,
+        "mae_percent": 3.8621,
+        "min_percent": -14.6372,
+        "max_percent": 5.1907
+      },
+      "band:right/top": {
+        "count": 2,
+        "bias_percent": 1.0053,
+        "mae_percent": 1.0053,
+        "min_percent": 0.0487,
+        "max_percent": 1.9619
+      },
+      "file:lane_width_samples.json": {
+        "count": 36,
+        "bias_percent": 0.0855,
+        "mae_percent": 1.7469,
+        "min_percent": -5.8065,
+        "max_percent": 3.3848
+      },
+      "file:lane_width_samples_1.json": {
+        "count": 40,
+        "bias_percent": -0.7254,
+        "mae_percent": 5.446,
+        "min_percent": -15.0179,
+        "max_percent": 7.7463
+      },
+      "file_band:lane_width_samples.json:center/bottom": {
+        "count": 4,
+        "bias_percent": 0.4713,
+        "mae_percent": 2.0761,
+        "min_percent": -3.2096,
+        "max_percent": 2.0163
+      },
+      "file_band:lane_width_samples.json:center/middle": {
+        "count": 3,
+        "bias_percent": 0.0481,
+        "mae_percent": 0.4857,
+        "min_percent": -0.6564,
+        "max_percent": 0.7277
+      },
+      "file_band:lane_width_samples.json:center/top": {
+        "count": 5,
+        "bias_percent": -1.3709,
+        "mae_percent": 2.1638,
+        "min_percent": -4.4523,
+        "max_percent": 1.9824
+      },
+      "file_band:lane_width_samples.json:left/bottom": {
+        "count": 3,
+        "bias_percent": 0.3047,
+        "mae_percent": 2.9011,
+        "min_percent": -3.8945,
+        "max_percent": 2.4418
+      },
+      "file_band:lane_width_samples.json:left/middle": {
+        "count": 9,
+        "bias_percent": 0.8367,
+        "mae_percent": 2.1926,
+        "min_percent": -4.6419,
+        "max_percent": 3.3848
+      },
+      "file_band:lane_width_samples.json:left/top": {
+        "count": 7,
+        "bias_percent": -0.4661,
+        "mae_percent": 1.2284,
+        "min_percent": -5.8065,
+        "max_percent": 0.9304
+      },
+      "file_band:lane_width_samples.json:right/middle": {
+        "count": 3,
+        "bias_percent": 0.2363,
+        "mae_percent": 1.0871,
+        "min_percent": -1.2763,
+        "max_percent": 1.9167
+      },
+      "file_band:lane_width_samples.json:right/top": {
+        "count": 2,
+        "bias_percent": 1.0053,
+        "mae_percent": 1.0053,
+        "min_percent": 0.0487,
+        "max_percent": 1.9619
+      },
+      "file_band:lane_width_samples_1.json:center/bottom": {
+        "count": 9,
+        "bias_percent": -0.9379,
+        "mae_percent": 5.8784,
+        "min_percent": -15.0179,
+        "max_percent": 5.4374
+      },
+      "file_band:lane_width_samples_1.json:center/middle": {
+        "count": 3,
+        "bias_percent": -5.4958,
+        "mae_percent": 6.0106,
+        "min_percent": -14.5806,
+        "max_percent": 0.7721
+      },
+      "file_band:lane_width_samples_1.json:center/top": {
+        "count": 6,
+        "bias_percent": -1.7937,
+        "mae_percent": 3.4784,
+        "min_percent": -14.8176,
+        "max_percent": 1.8782
+      },
+      "file_band:lane_width_samples_1.json:left/bottom": {
+        "count": 4,
+        "bias_percent": 6.0345,
+        "mae_percent": 6.0345,
+        "min_percent": 5.0282,
+        "max_percent": 7.7463
+      },
+      "file_band:lane_width_samples_1.json:left/middle": {
+        "count": 5,
+        "bias_percent": 0.7496,
+        "mae_percent": 2.3924,
+        "min_percent": -2.1193,
+        "max_percent": 3.9653
+      },
+      "file_band:lane_width_samples_1.json:left/top": {
+        "count": 5,
+        "bias_percent": 3.5439,
+        "mae_percent": 3.7905,
+        "min_percent": -0.6164,
+        "max_percent": 6.8746
+      },
+      "file_band:lane_width_samples_1.json:right/bottom": {
+        "count": 5,
+        "bias_percent": -5.9135,
+        "mae_percent": 10.2141,
+        "min_percent": -14.3742,
+        "max_percent": 7.3776
+      },
+      "file_band:lane_width_samples_1.json:right/middle": {
+        "count": 3,
+        "bias_percent": -3.121,
+        "mae_percent": 6.6371,
+        "min_percent": -14.6372,
+        "max_percent": 5.1907
+      }
+    }
+  }
+}
